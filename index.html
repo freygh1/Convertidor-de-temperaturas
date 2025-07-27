@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertidor de Temperaturas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- Body -->
+<body>
+  <main>
+    <nav id="navbar">
+      <!-- barra de navegacion -->
+    </nav>
+    <div id="notes_ctn">
+      <p>Cada escala de temperatura debe ser igual o mayor a:</p>
+      <ul>
+        <li><strong>Kelvin (K):</strong> 0 (Cero absoluto)</li>
+        <li><strong>Celcius (°C):</strong> -273.15</li>
+        <li><strong>Fahrenheit (°F):</strong> -459.67</li>
+      </ul>
+    </div>
+    <div class="app_ctn">
+      <h1 class="app_title">Convertidor de Temperaturas</h1>
+      <!-- Temperature selector: -->
+      <div id="temperature_selector">
+        <div>
+          <select id="from_selector" name="temperature_selector-from">
+            <option value="kelvin">Kelvin (K)</option>
+            <option value="kelvin">Celcius (°C)</option>
+            <option value="kelvin">Fahrenheit (°F)</option>
+          </select>
+          <span>to:</span>
+          <select id="to_selector" name="temperature_selector-to">
+            <option value="kelvin">Kelvin (K)</option>
+            <option value="kelvin">Celcius (°C)</option>
+            <option value="kelvin">Fahrenheit (°F)</option>
+          </select>
+        </div>
+        <input id="input_value" type="number" placeholder="Digita valor a convertir...">
+        <button class="btn" id="convert_btn" type="button">Convertir</button>
+      </div>
+      <div>
+        <div id="result_ctn" class="hidden">
+          <!-- Result -->
+        </div>
+        <button id="reset_btn" class="btn" type="reset">Reiniciar</button>
+      </div>
+    </div>
+  </main>
+  <!-- Funcionalidad -->
+  <script src="script.js"></script>
+</body>
+
+</html>
