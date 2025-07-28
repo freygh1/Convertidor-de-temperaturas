@@ -6,24 +6,36 @@ const inputValue = document.getElementById('input_value')
 const convertBtn = document.getElementById('convert_btn')
 const resultCtn = document.getElementById('result_ctn')
 const resetBtn = document.getElementById('reset_btn') 
-
-        
+     
 const limpiarInput = () => inputValue.value = ''
+      
+const cambiarPlaceholder = () => {
+      if (fromSelector.value === toSelector.value) {
+          inputValue.setAttribute('placeholder', 'Las escalas no pueden ser iguales')
+      }
+      else{
+            inputValue.setAttribute('placeholder', 'Digita valor a convertir...')
+      }
+}
 
 const seleccionDeEscala = () =>{
    fromSelector.addEventListener('change', (seleccion) =>{
         limpiarInput()  
-        switch (seleccion.target.value) {
-        case "kelvin":
-        inputValue.min = "0" 
-        break;        
+        switch (seleccion.target.value) {     
         case "celsius":
         inputValue.min = "-273.15"
         break;
         case "fahrenheit":
         inputValue.min = "-459.67"
         break
+        default:
+        inputValue.min = "0" 
     }
+  })
+  cambiarPlaceholder()
+  toSelector.addEventListener('change', () => {
+      limpiarInput()
+      cambiarPlaceholder()
   })
 }
 
