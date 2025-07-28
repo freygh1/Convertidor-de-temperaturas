@@ -44,3 +44,15 @@ main {
   width: min-content;
 }
 
+#input_value{
+  width: 250px;
+  height: 20px;
+  margin: 5px 0;
+}
+
+#input_value::placeholder{
+  font-style:italic;
+  font-weight: bold;
+}
+
+
