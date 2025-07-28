@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #81f1f5;
+  height: 100vh;
+}
+
+h1, h2{
+  background: linear-gradient(45deg, #5176b9, #276987, #233269);
+  color: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 15px;
+}
+
+main {
+  display: grid;
+  gap: 2vh;
+  grid-template-columns: minmax(100px, 250px) 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'notes app ';
+  height: 100%;
+  padding: 0 30px;
+}
+
+#notes_ctn {
+  grid-area: 'notes';
+  width: 100%;
+  align-content: center;
+  border-right: 2px solid;
+}
+
+.app_ctn {
+  grid-area: "app";
+  align-content: center;
+  padding-left: 40px;
+}
+
+.app_title{
+  width: min-content;
+}
+
