@@ -89,3 +89,8 @@ convertBtn.addEventListener('click', () => {
 })
 
 
+/**Queda por agregar:
+ * Funcionalidad que borre el resultado al editar o cambiar de escalas, no solo el input
+ * Funcionalidad del resetBtn para reseteo manual
+ * Agregar otras escalas de temperatura
+ */
