@@ -8,8 +8,8 @@ const resultCtn = document.getElementById('result_ctn')
 const resetBtn = document.getElementById('reset_btn')
 
 const limpiarInput = () => inputValue.value = ''
-
-const cambiarPlaceholder = () => {
+const limpiarResultado = () => resultCtn.innerHTML = ''
+const verificarValidez = () => {
       if (fromSelector.value === toSelector.value) {
             inputValue.setAttribute('disabled', 'true')
             convertBtn.setAttribute('disabled', 'true')
@@ -39,16 +39,20 @@ const actualizarEscala = (escala) => {
 }
 
 const seleccionDeEscala = () => {
-      cambiarPlaceholder()
+      verificarValidez()
       actualizarEscala(fromSelector.value)
+
       fromSelector.addEventListener('change', (seleccion) => {
             limpiarInput()
-            cambiarPlaceholder()
+            limpiarResultado()
+            verificarValidez()
             actualizarEscala(seleccion.target.value)
       })
+
       toSelector.addEventListener('change', () => {
             limpiarInput()
-            cambiarPlaceholder()
+            limpiarResultado()
+            verificarValidez()
       })
 }
 
@@ -88,9 +92,21 @@ convertBtn.addEventListener('click', () => {
       )
 })
 
+resetBtn.addEventListener('click', () => {
+      limpiarResultado()
+      limpiarInput()
+
+      if (fromSelector.value !== 'kelvin') {
+            fromSelector.value = 'kelvin'
+      }
+
+      if (toSelector.value !== 'kelvin') {
+            fromSelector.value = 'kelvin'
+      }
+})
+
 
 /**Queda por agregar:
- * Funcionalidad que borre el resultado al editar o cambiar de escalas, no solo el input
- * Funcionalidad del resetBtn para reseteo manual
  * Agregar otras escalas de temperatura
+ * Que se ejecute el convertBtn al presionar tecla enter
  */
