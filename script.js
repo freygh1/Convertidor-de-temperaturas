@@ -107,6 +107,7 @@ resetBtn.addEventListener('click', () => {
             toSelector.value = 'kelvin'
       }
       verificarValidez()
+      // Lo ultimo agregado:
 })
 
 
