@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -9,19 +10,10 @@ body {
   height: 100vh;
 }
 
-h1, h2{
-  background: linear-gradient(45deg, #5176b9, #276987, #233269);
-  color: #ffffff;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 15px;
-}
-
 main {
   display: grid;
   gap: 2vh;
   grid-template-columns: minmax(100px, 250px) 2fr;
-  grid-template-rows: 1fr;
   grid-template-areas: 'notes app ';
   height: 100%;
   padding: 0 30px;
@@ -36,23 +28,51 @@ main {
 
 .app_ctn {
   grid-area: "app";
+  justify-items: center;
   align-content: center;
-  padding-left: 40px;
 }
 
-.app_title{
-  width: min-content;
+.app_title {
+  background: linear-gradient(45deg, #5176b9, #276987, #233269);
+  color: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 15px;
+  width: 400px;
+  text-align: center;
+  font-size: 3.3rem;
 }
 
-#input_value{
-  width: 250px;
-  height: 20px;
+#input_value {
+  width: 425px;
+  height: 30px;
   margin: 5px 0;
 }
 
-#input_value::placeholder{
-  font-style:italic;
+#input_value::placeholder {
+  font-style: italic;
   font-weight: bold;
 }
 
+.selectors,
+input {
+  font-size: 1.2rem;
+}
 
+.selectors {
+  width: 200px;
+}
+
+button {
+  padding: 10px;
+}
+
+#result_ctn {
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  margin: 10px 0;
+  font-size: 1.3rem;
+  font-weight: 900;
+  user-select: text;
+}
