@@ -85,28 +85,31 @@ const calculosEntreEscalas = (num, from, to) => {
 }
 
 convertBtn.addEventListener('click', () => {
-      resultCtn.textContent = calculosEntreEscalas(
-            inputValue.value,
-            fromSelector.value,
-            toSelector.value
-      )
+      if (!inputValue.value) {
+            resultCtn.textContent = 'ingresa el digito a convertir'
+      } else {
+            resultCtn.textContent = calculosEntreEscalas(
+                  inputValue.value,
+                  fromSelector.value,
+                  toSelector.value
+            )
+      }
 })
 
 resetBtn.addEventListener('click', () => {
       limpiarResultado()
       limpiarInput()
-
       if (fromSelector.value !== 'kelvin') {
             fromSelector.value = 'kelvin'
       }
 
       if (toSelector.value !== 'kelvin') {
-            fromSelector.value = 'kelvin'
+            toSelector.value = 'kelvin'
       }
+      verificarValidez()
 })
 
 
 /**Queda por agregar:
- * Agregar otras escalas de temperatura
  * Que se ejecute el convertBtn al presionar tecla enter
  */
