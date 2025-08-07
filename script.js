@@ -100,6 +100,12 @@ convertBtn.addEventListener('click', () => {
       }
 })
 
+inputValue.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+           return convertBtn.click()
+      }
+})
+
 resetBtn.addEventListener('click', () => {
       limpiarResultado()
       limpiarInput()
