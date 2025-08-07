@@ -86,8 +86,12 @@ const calculosEntreEscalas = (num, from, to) => {
 
 convertBtn.addEventListener('click', () => {
       if (!inputValue.value) {
-            resultCtn.textContent = 'ingresa el digito a convertir'
-      } else {
+            resultCtn.textContent = 'Ingresa el dígito a convertir'
+      } else if (inputValue.value && parseFloat(inputValue.value) < parseFloat(inputValue.min)) {
+            resultCtn.textContent = 'El valor es menor al mínimo'
+      }
+      else {
+            limpiarResultado()
             resultCtn.textContent = calculosEntreEscalas(
                   inputValue.value,
                   fromSelector.value,
@@ -109,6 +113,7 @@ resetBtn.addEventListener('click', () => {
       verificarValidez()
       // Lo ultimo agregado:
 })
+
 
 
 /**Queda por agregar:
