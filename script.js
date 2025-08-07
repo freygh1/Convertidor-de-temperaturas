@@ -22,7 +22,7 @@ const verificarValidez = () => {
       }
 }
 
-const actualizarEscala = (escala) => {
+const actualizarValorMinimoDeLaEscala = (escala) => {
       switch (escala) {
             case "kelvin":
                   inputValue.min = "0"
@@ -40,13 +40,13 @@ const actualizarEscala = (escala) => {
 
 const seleccionDeEscala = () => {
       verificarValidez()
-      actualizarEscala(fromSelector.value)
+      actualizarValorMinimoDeLaEscala(fromSelector.value)
 
       fromSelector.addEventListener('change', (seleccion) => {
             limpiarInput()
             limpiarResultado()
             verificarValidez()
-            actualizarEscala(seleccion.target.value)
+            actualizarValorMinimoDeLaEscala(seleccion.target.value)
       })
 
       toSelector.addEventListener('change', () => {
