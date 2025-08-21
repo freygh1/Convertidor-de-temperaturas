@@ -21,6 +21,19 @@ main {
   box-shadow: 0px 0px 5px #000, 0px 0px 5px #000 inset;
 }
 
+#notes_ctn li {
+  list-style: none;
+}
+
+#notes_ctn a {
+  color: black;
+  transition: all .2s ease;
+}
+
+#notes_ctn a:hover {
+  color: rgb(135, 66, 66);
+}
+
 .app_ctn {
   grid-area: "app";
   justify-items: center;
@@ -89,7 +102,7 @@ button {
 
 @media screen and (max-width: 710px) {
   main {
-    grid-template-rows: minmax(100px, 300px) 2fr;
+    grid-template-rows: minmax(100px, 130px) 2fr;
     grid-template-columns: 1fr;
     grid-template-areas:
       'notes'
