@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertidor de Temperaturas</title>
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<!-- Body -->
+
+<body>
+  <main>
+    <!-- Notas -->
+    <section class="notes_ctn">
+      <p>Más herramientas:</p>
+      <ul>
+        <li><strong><a href="#">Convertidor de unidades</a></strong></li>
+        <li><strong><a href="#">Conversor a notación cientifica</a></strong></li>
+      </ul>
+    </section>
+    <section class="app_ctn">
+      <h1 class="app_title">Convertidor de Temperaturas</h1>
+      <div id="selection_process_ctn">
+        <!-- Temperature selector: -->
+        <div id="temperature_selectors">
+          <select id="from_selector" class="selectors" name="temperature_selector-from">
+            <option value="kelvin">Kelvin (K)</option>
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+          </select>
+          <span>to:</span>
+          <select id="to_selector" class="selectors" name="temperature_selector-to">
+            <option value="kelvin">Kelvin (K)</option>
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+          </select>
+        </div>
+        <input id="input_value" type="number" placeholder="Digita valor a convertir...">
+      </div>
+      <div>
+        <button id="convert_btn" class="btn" type="button">Convertir</button>
+
+        <button id="reset_btn" class="btn" type="reset">Reiniciar</button>
+      </div>
+      <div id="result_ctn">
+        <!-- Result -->
+      </div>
+    </section>
+  </main>
+  <!-- Funcionalidad -->
+  <script src="/js/temperature.js"></script>
+</body>
+
+</html>

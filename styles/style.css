@@ -1,0 +1,39 @@
+
+
+#input_value {
+  width: 100%;
+  height: 30px;
+  margin: 5px 0;
+}
+
+#input_value::placeholder {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.selectors,
+input {
+  font-size: 1rem;
+}
+
+.selectors {
+  width: max-content;
+}
+
+button {
+  padding: 10px;
+}
+
+#result_ctn {
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  margin: 10px 0;
+  font-size: 1.3rem;
+  font-weight: 900;
+  user-select: text;
+}
+
+
+
+

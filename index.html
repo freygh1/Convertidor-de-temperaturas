@@ -1,56 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Head -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convertidor de Temperaturas</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-<!-- Body -->
 
 <body>
   <main>
-    <!-- Notas -->
-    <section id="notes_ctn">
-      <p>Más herramientas:</p>
+    <section class="notes_ctn">
+      <p>Herramientas:</p>
       <ul>
-        <li><strong><a href="#" target="_blank" rel="noopener noreferrer">Convertidor de unidades</a></strong></li>
-        <li><strong><a href="#" target="_blank" rel="noopener noreferrer">Conversor a notación cientifica</a> </strong></li>
+        <li><strong><a href="/pages/convertidor_de_temperaturas.html">Convertidor de temperaturas</a></strong></li>
+        <li><strong><a href="/pages/conversor_notacion_cientifica.html">Conversor a notación cientifica</a></strong></li>
       </ul>
     </section>
     <section class="app_ctn">
-      <h1 class="app_title">Convertidor de Temperaturas</h1>
-      <div id="selection_process_ctn">
-        <!-- Temperature selector: -->
-        <div id="temperature_selectors">
-          <select id="from_selector" class="selectors" name="temperature_selector-from">
-            <option value="kelvin">Kelvin (K)</option>
-            <option value="celsius">Celsius (°C)</option>
-            <option value="fahrenheit">Fahrenheit (°F)</option>
-          </select>
-          <span>to:</span>
-          <select id="to_selector" class="selectors" name="temperature_selector-to">
-            <option value="kelvin">Kelvin (K)</option>
-            <option value="celsius">Celsius (°C)</option>
-            <option value="fahrenheit">Fahrenheit (°F)</option>
-          </select>
-        </div>
-        <input id="input_value" type="number" placeholder="Digita valor a convertir...">
-      </div>
-      <div>
-        <button id="convert_btn" class="btn" type="button">Convertir</button>
-
-        <button id="reset_btn" class="btn" type="reset">Reiniciar</button>
-      </div>
-      <div id="result_ctn" >
-        <!-- Result -->
-      </div>
+      <h1>Bienvenido a ConvertTools</h1>
+      <h2 class="app_title">Todas tus herramientas de conversion en el mismo lugar!</h2>
+      <h3>sin coste... sin anuncios</h3>
     </section>
   </main>
-  <!-- Funcionalidad -->
-  <script src="script.js"></script>
 </body>
 
 </html>
