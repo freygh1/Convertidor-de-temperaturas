@@ -31,3 +31,7 @@ button {
   font-weight: 900;
   user-select: text;
 }
+
+.nota_final{
+  width: 50%;
+}
