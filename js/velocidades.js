@@ -87,7 +87,7 @@ const calculosEntreEscalas = (num, from, to) => {
   } else if (to === 'mph') {
     resultados = metrosPorSegundo  * 2.23694
   } else if (to === 'ft/s') {
-   resultados =  metrosPorSegundom * 3.28084
+   resultados = metrosPorSegundo * 3.28084
   } else {
     resultados = metrosPorSegundo  * 1.94384
   }
