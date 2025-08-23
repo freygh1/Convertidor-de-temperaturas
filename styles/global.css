@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #81f1f5;
+  background-color: #b6efee;
   height: 100vh;
 }
 
@@ -30,13 +30,10 @@ main {
   text-align: center;
   font-size: min(5vw, 45px);
 }
-
-
 .notes_ctn {
   grid-area: 'notes';
   align-content: center;
   justify-items: center;
-  box-shadow: 0px 0px 5px #000, 0px 0px 5px #000 inset;
   padding: 10px;
 }
 
@@ -62,13 +59,13 @@ main {
 
 @media screen and (min-width:710px) {
   .notes_ctn {
-    border-right: 1px solid #5175b9d7;
+    border-right: 1px solid #060834;
   }
 }
 
 @media screen and (max-width: 710px) {
   .notes_ctn {
-    border: 2px solid transparent;
+    border-bottom: 1px solid #060834;
     margin-top: 2vh;
   }
 }
